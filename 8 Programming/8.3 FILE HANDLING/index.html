@@ -1,0 +1,1088 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../8.2%20ARRAYS/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>8.3 FILE HANDLING - IGCSE CS STUDY powered by CodeRaft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#83-file-handling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGCSE CS STUDY powered by CodeRaft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8.3 FILE HANDLING
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGCSE CS STUDY powered by CodeRaft
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8 Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            8 Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1 PROGRAMMING CONCEPTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.1%282%29%20PROGRAMMING%20CONCEPTS%20CONTINUED/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1(2) PROGRAMMING CONCEPTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.2%20ARRAYS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2 ARRAYS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    8.3 FILE HANDLING
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    8.3 FILE HANDLING
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#83-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 | FILE HANDLING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 | FILE HANDLING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-what-is-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 1 | WHAT IS FILE HANDLING
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-reading-from-a-text-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 2 | READING FROM A TEXT FILE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-closing-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 4 | CLOSING A FILE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-5-copying-text-between-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 5 | COPYING TEXT BETWEEN FILES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-6-readwrite-word-line-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 6 | READ/WRITE - WORD, LINE, DOCUMENT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-7-file-handling-with-spreadsheets-csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 7 | FILE HANDLING WITH SPREADSHEETS / CSV FILES
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#83-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 | FILE HANDLING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 | FILE HANDLING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-what-is-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 1 | WHAT IS FILE HANDLING
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-reading-from-a-text-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 2 | READING FROM A TEXT FILE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-closing-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 4 | CLOSING A FILE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-5-copying-text-between-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 5 | COPYING TEXT BETWEEN FILES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-6-readwrite-word-line-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 6 | READ/WRITE - WORD, LINE, DOCUMENT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-7-file-handling-with-spreadsheets-csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 7 | FILE HANDLING WITH SPREADSHEETS / CSV FILES
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>8.3 FILE HANDLING</h1>
+
+<h2 id="83-file-handling">8.3 | FILE HANDLING</h2>
+<h3 id="section-1-what-is-file-handling">SECTION 1 | WHAT IS FILE HANDLING</h3>
+<p>File handling refers to the process by which a computer program interacts with files stored on a disk, enabling the reading, writing, and modification of data. Unlike data stored in standard arrays, which are temporary and reset every time a program restarts, files provide a way to preserve data persistently across multiple runs of an application. This is crucial for applications that require long-term data storage, such as user settings, game scores, or transaction logs.</p>
+<p>In programming languages like Python, file handling is straightforward yet powerful. Python uses simple commands to open, read, write, and close files, making it an ideal learning tool for students transitioning from temporary data storage in arrays to more permanent solutions. For example, to write data to a file, a Python program might open a file in write mode ('w'), write strings directly to the file, and then close it to ensure the data is saved:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Have a great day.&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>DECLARE DataToStore : STRING
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>DataToStore ← &quot;Have a great day.&quot;
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>OPENFILE &quot;data.txt&quot; FOR WRITE
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>WRITEFILE &quot;data.txt&quot;, DataToStore
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>CLOSEFILE &quot;data.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p>This code snippet opens data.txt (or creates it if it doesn't exist), writes a line of text, and automatically closes the file when done. The use of files allows data to be retained after the program closes, providing a durable means of storing information that can be retrieved and manipulated in subsequent program executions. This concept of persistent storage is fundamental for developing applications that interact with user data or require the retention of operational data over time.</p>
+<h3 id="section-2-reading-from-a-text-file">SECTION 2 | READING FROM A TEXT FILE</h3>
+<p>To read data from a file, you must first open it in READ mode. Once opened, you can read the data using:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Open the file &quot;data.txt&quot; in read mode and read from it</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">my_data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1"># Output the data read from the file</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>DECLARE MyData : STRING
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>OPENFILE &quot;data.txt&quot; FOR READ
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>READFILE &quot;data.txt&quot;, MyData
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>CLOSEFILE &quot;data.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p>SECTION 3 | WRITING TO A TEXT FILE</p>
+<p>To write data to a file, open it in WRITE mode. Any existing content in the file will be erased. To write, use:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Open the file &quot;output.txt&quot; in write mode and write to it</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>DECLARE MyData : STRING
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>MyData ← &quot;Hello, world!&quot;
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>OPENFILE &quot;output.txt&quot; FOR WRITE
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>WRITEFILE &quot;output.txt&quot;, MyData
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>CLOSEFILE &quot;output.txt&quot;
+</code></pre></div></td></tr></table></div>
+<h3 id="section-4-closing-a-file">SECTION 4 | CLOSING A FILE</h3>
+<p>After completing the read or write operations, it is good practice to close the file:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>CLOSEFILE &quot;output.txt&quot;
+</code></pre></div></td></tr></table></div>
+<h3 id="section-5-copying-text-between-files">SECTION 5 | COPYING TEXT BETWEEN FILES</h3>
+<p>Consider a scenario where you need to copy a line of text from one file to another:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># Open &quot;FileA.txt&quot; for reading</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;FileA.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_a</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="n">line_of_text</span> <span class="o">=</span> <span class="n">file_a</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># Read all content from FileA</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c1"># Open &quot;FileB.txt&quot; for writing</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;FileB.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_b</span><span class="p">:</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="n">file_b</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line_of_text</span><span class="p">)</span>  <span class="c1"># Write the content to FileB</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>DECLARE LineOfText : STRING
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>OPENFILE &quot;FileA.txt&quot; FOR READ
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>OPENFILE &quot;FileB.txt&quot; FOR WRITE
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>READFILE &quot;FileA.txt&quot;, LineOfText
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>WRITEFILE &quot;FileB.txt&quot;, LineOfText
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>CLOSEFILE &quot;FileA.txt&quot;
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>CLOSEFILE &quot;FileB.txt&quot;
+</code></pre></div></td></tr></table></div>
+<h3 id="section-6-readwrite-word-line-document">SECTION 6 | READ/WRITE - WORD, LINE, DOCUMENT</h3>
+<p>Here, we explore the concepts of reading and writing by word, by line, and by the entire document, and how these operations are typically implemented in programming.</p>
+<p><strong>Reading and Writing a Word</strong>
+When you read or write a word from a file, you are typically interacting with the smallest unit of meaningful text separated by spaces or punctuation. This level of granularity is useful for text analysis, such as counting word frequency or replacing specific words.</p>
+<p><strong>READING A WORD</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">words</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># This reads the entire content and splits it by whitespace</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c1"># This prints each word separately</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>OPENFILE &quot;file.txt&quot; FOR READ
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>DECLARE words : LIST OF STRING
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>READFILE &quot;file.txt&quot;, words  // Assuming the entire file is read and split into words
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>FOR EACH word IN words
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>    OUTPUT word
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>ENDFOR
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>CLOSEFILE &quot;file.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>WRITING A WORD</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">word</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># Writes a single word to the file, followed by a space</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>DECLARE word : STRING
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>word ← &quot;Hello&quot;
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>OPENFILE &quot;file.txt&quot; FOR WRITE
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>WRITEFILE &quot;file.txt&quot;, word + &quot; &quot;  // Adds a space after the word
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>CLOSEFILE &quot;file.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>Reading and Writing a Line</strong>
+Lines represent a sequence of characters ending with a newline character (\n). Handling data line by line is one of the most common forms of file manipulation, used for reading configuration files, logs, or any data structured into rows.</p>
+<p><strong>READING A LINE</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>  <span class="c1"># `strip` removes the newline character at the end of each line</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>OPENFILE &quot;file.txt&quot; FOR READ
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>DECLARE line : STRING
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>WHILE NOT EOF(&quot;file.txt&quot;)  // Loop until the end of the file
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>    READFILE &quot;file.txt&quot;, line
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>    OUTPUT line
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>ENDWHILE
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>CLOSEFILE &quot;file.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>WRITING A LINE</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    <span class="n">line</span> <span class="o">=</span> <span class="s2">&quot;This is a line of text</span><span class="se">\n</span><span class="s2">&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>  <span class="c1"># Writes the line including the newline character to delineate lines</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>DECLARE line : STRING
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>line ← &quot;This is a line of text\n&quot;
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>OPENFILE &quot;file.txt&quot; FOR WRITE
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>WRITEFILE &quot;file.txt&quot;, line
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>CLOSEFILE &quot;file.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>Reading and Writing the Entire Document</strong>
+Sometimes, it's necessary to work with the entire content of a document at once, such as when loading configuration settings or processing small files where it's efficient to work with all the data in memory.</p>
+<p><strong>READING THE DOCUMENT</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># Reads the entire file into a single string</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>OPENFILE &quot;file.txt&quot; FOR READ
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>DECLARE content : STRING
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>READFILE &quot;file.txt&quot;, content  // Reads the entire file into &#39;content&#39;
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>OUTPUT content
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>CLOSEFILE &quot;file.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>WRITING THE DOCUMENT</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;This is the entire content of the file.&quot;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># Writes a large block of text to the file</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>DECLARE content : STRING
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>content ← &quot;This is the entire content of the file.&quot;
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>OPENFILE &quot;file.txt&quot; FOR WRITE
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>WRITEFILE &quot;file.txt&quot;, content
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>CLOSEFILE &quot;file.txt&quot;
+</code></pre></div></td></tr></table></div>
+<p>MULTIPLE CHOICE QUESTIONS</p>
+<p>1: What does the OPENFILE command do in file handling?
+A) Closes the file
+B) Reads data from the file
+C) Opens the file for reading, writing, or both
+D) Deletes the file</p>
+<p>2: When opening a file for writing using OPENFILE "data.txt" FOR WRITE, what happens if "data.txt" already exists?
+A) The file is deleted and a new empty file is created.
+B) The file cannot be opened unless it is empty.
+C) Data will be appended to the existing data.
+D) The file is opened normally with no changes to existing data.</p>
+<p>3: Which command reads data from an open file into a variable?
+A) OPENFILE
+B) READFILE
+C) WRITEFILE
+D) CLOSEFILE</p>
+<p>4: Why is it important to close a file after operations are completed?
+A) To save the data written to the file
+B) To free up system resources
+C) Both A and B
+D) Closing a file is optional and does not impact the system or data.</p>
+<p>5: In file handling, what does EOF stand for, and why is it significant?
+A) End Of File, it indicates that there is no more data to read from the file.
+B) Execution Of File, it indicates that the file is currently being executed.
+C) Each Open File, a reference to all open files in a program.
+D) Error On File, an error message that occurs when a file cannot be accessed.</p>
+<p>6: Which file mode should be used if you need to both read from and write to the same file without deleting its contents?
+A) READ
+B) WRITE
+C) APPEND
+D) READ/WRITE
+​
+7: What is a potential consequence of not closing a file in a program?
+A) The data might not be properly saved to the file.
+B) The program might use more memory than necessary.
+C) Other programs might not be able to open the file.
+D) All of the above.</p>
+<p>8: How can you ensure data is read one line at a time from a file?
+A) Use READFILE <File Identifier>, <Variable> and specify you want lines.
+B) Read the entire file and split the data into lines in the program.
+C) Use a loop to read until EOF, capturing data line by line.
+D) It's not possible to read data one line at a time.</p>
+<p>9: What is the correct way to write the string "Hello World" to a new file called "greetings.txt"?
+A) OPENFILE "greetings.txt" FOR WRITE then WRITEFILE "Hello World"
+B) WRITEFILE "greetings.txt", "Hello World" without opening the file.
+C) OPENFILE "greetings.txt" FOR WRITE then WRITEFILE "greetings.txt", "Hello World" then CLOSEFILE "greetings.txt"
+D) WRITEFILE "greetings.txt", "Hello World" then CLOSEFILE "greetings.txt"</p>
+<p>10: Which of the following is true about the WRITEFILE command?
+A) It can be used without opening the file first.
+B) It appends the data to the end of the file by default.
+C) It overwrites the existing content unless the file is opened in append mode.
+D) It reads data from the file and writes it to another file.</p>
+<h3 id="section-7-file-handling-with-spreadsheets-csv-files">SECTION 7 | FILE HANDLING WITH SPREADSHEETS / CSV FILES</h3>
+<p>CSV (Comma Separated Values) files are commonly used to store tabular data. These files are straightforward to read from and write to because their data is separated by commas, making parsing simple. In computer programming, handling CSV files efficiently can be crucial for data processing tasks such as database uploads, data analysis, and report generation. Here, we'll explore how to perform basic operations such as reading, writing, appending, and modifying data in CSV files.</p>
+<p><strong>READING FROM A CSV FILE</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>  <span class="c1"># Each row is a list of values</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>OPENFILE &quot;data.csv&quot; FOR READ
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>DECLARE row : STRING
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>WHILE NOT EOF(&quot;data.csv&quot;)
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>    READFILE &quot;data.csv&quot;, row
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>    OUTPUT row  // Prints each row of the CSV file
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>ENDWHILE
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>CLOSEFILE &quot;data.csv&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>WRITING TO A CSV FILE</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;new_data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="p">])</span>  <span class="c1"># Write a header row</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>OPENFILE &quot;new_data.csv&quot; FOR WRITE
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>DECLARE dataRow : STRING
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>dataRow ← &quot;Name,Age,Location&quot;
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>WRITEFILE &quot;new_data.csv&quot;, dataRow
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>CLOSEFILE &quot;new_data.csv&quot;
+</code></pre></div></td></tr></table></div>
+<p><strong>APPENDING A CSV FILE</strong></p>
+<p>Appending to a CSV file involves adding new rows of data without overwriting existing data.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">OPENFILE</span> <span class="s2">&quot;data.csv&quot;</span> <span class="n">FOR</span> <span class="n">APPEND</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="n">DECLARE</span> <span class="n">newRow</span> <span class="p">:</span> <span class="n">STRING</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="n">newRow</span> <span class="err">←</span> <span class="s2">&quot;John,30,New York&quot;</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="n">WRITEFILE</span> <span class="s2">&quot;data.csv&quot;</span><span class="p">,</span> <span class="n">newRow</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="n">CLOSEFILE</span> <span class="s2">&quot;data.csv&quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>import csv
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>with open(&#39;data.csv&#39;, &#39;a&#39;, newline=&#39;&#39;) as file:
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>    writer = csv.writer(file)
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>    writer.writerow([&#39;John&#39;, 30, &#39;New York&#39;])  # Append a new row
+</code></pre></div></td></tr></table></div>
+<p><strong>MODIFYING A CSV FILE</strong></p>
+<p>Modifying a CSV file generally involves reading the existing data, making changes, and then writing the data back to the file.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-27-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-27-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-27-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-27-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-27-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-27-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-27-10">10</a></span>
+<span class="normal"><a href="#__codelineno-27-11">11</a></span>
+<span class="normal"><a href="#__codelineno-27-12">12</a></span>
+<span class="normal"><a href="#__codelineno-27-13">13</a></span>
+<span class="normal"><a href="#__codelineno-27-14">14</a></span>
+<span class="normal"><a href="#__codelineno-27-15">15</a></span>
+<span class="normal"><a href="#__codelineno-27-16">16</a></span>
+<span class="normal"><a href="#__codelineno-27-17">17</a></span>
+<span class="normal"><a href="#__codelineno-27-18">18</a></span>
+<span class="normal"><a href="#__codelineno-27-19">19</a></span>
+<span class="normal"><a href="#__codelineno-27-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="c1"># Read all data</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a>    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a>        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a><span class="c1"># Modify data</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a>    <span class="k">if</span> <span class="s1">&#39;OldLocation&#39;</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a>        <span class="n">index</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;OldLocation&#39;</span><span class="p">)</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14"></a>        <span class="n">row</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NewLocation&#39;</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15"></a>
+<a id="__codelineno-27-16" name="__codelineno-27-16"></a><span class="c1"># Write data back</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18"></a>    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20"></a>        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-28-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-28-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-28-10">10</a></span>
+<span class="normal"><a href="#__codelineno-28-11">11</a></span>
+<span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span>
+<span class="normal"><a href="#__codelineno-28-16">16</a></span>
+<span class="normal"><a href="#__codelineno-28-17">17</a></span>
+<span class="normal"><a href="#__codelineno-28-18">18</a></span>
+<span class="normal"><a href="#__codelineno-28-19">19</a></span>
+<span class="normal"><a href="#__codelineno-28-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>import csv
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a># Read all data
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a>data = []
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a>with open(&#39;data.csv&#39;, &#39;r&#39;, newline=&#39;&#39;) as file:
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a>    reader = csv.reader(file)
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a>    for row in reader:
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a>        data.append(row)
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a># Modify data
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a>for row in data:
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a>    if &#39;OldLocation&#39; in row:
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a>        index = row.index(&#39;OldLocation&#39;)
+<a id="__codelineno-28-14" name="__codelineno-28-14"></a>        row[index] = &#39;NewLocation&#39;
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a># Write data back
+<a id="__codelineno-28-17" name="__codelineno-28-17"></a>with open(&#39;data.csv&#39;, &#39;w&#39;, newline=&#39;&#39;) as file:
+<a id="__codelineno-28-18" name="__codelineno-28-18"></a>    writer = csv.writer(file)
+<a id="__codelineno-28-19" name="__codelineno-28-19"></a>    for row in data:
+<a id="__codelineno-28-20" name="__codelineno-28-20"></a>        writer.writerow(row)
+</code></pre></div></td></tr></table></div>
+<p>EXAMINATION STYLE QUESTIONS</p>
+<p><strong>1: What does the following block of pseudocode do?</strong></p>
+<p>DECLARE FileReader : FILE
+OPENFILE "journal.txt" FOR READ
+DECLARE LineCount : INTEGER
+LineCount ← 0
+DECLARE Line : STRING</p>
+<p>READFILE "journal.txt", Line
+WHILE NOT Line = ""
+  LineCount ← LineCount + 1
+  READFILE "journal.txt", Line
+ENDWHILE</p>
+<p>OUTPUT "Number of lines in the file: ", LineCount
+CLOSEFILE "journal.txt"</p>
+<p>A) Counts the number of words in journal.txt
+B) Counts the number of characters in journal.txt
+C) Counts the number of lines in journal.txt
+D) Copies the content of journal.txt to another file</p>
+<p><strong>2: Write pseudocode to append the text "Remember to subscribe!" to the end of an existing text file named "notes.txt".</strong></p>
+<p>*<em>3: Examine the following pseudocode and explain what it accomplishes.
+*</em>OPENFILE "report.txt" FOR WRITE
+FOR i FROM 1 TO 100
+  WRITEFILE "report.txt", "Line ", i
+ENDFOR
+CLOSEFILE "report.txt"</p>
+<p>*<em>4: Identify the error in the following pseudocode that intends to read each word from data.txt and print it.
+*</em>OPENFILE "data.txt" FOR READ
+DECLARE Word : STRING</p>
+<p>READFILE "data.txt", Word
+WHILE NOT Word = ""
+  OUTPUT Word
+  READFILE "data.txt", Word
+ENDWHILE</p>
+<p>CLOSEFILE "data.txt"</p>
+<p><strong>5: Given the scenario where a student needs to save their daily expenses into a file named "expenses.txt", write pseudocode that allows the user to enter their expenses one at a time and save each entry on a new line in the file until the user types "stop".</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-360RS2BYLD"></script>
+      
+    
+  </body>
+</html>

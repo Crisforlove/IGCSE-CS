@@ -1,0 +1,1416 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../8.1%20PROGRAMMING%20CONCEPTS/">
+      
+      
+        <link rel="next" href="../8.2%20ARRAYS/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>8.1(2) PROGRAMMING CONCEPTS - IGCSE CS STUDY powered by CodeRaft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#812-programming-concepts-continued" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGCSE CS STUDY powered by CodeRaft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8.1(2) PROGRAMMING CONCEPTS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGCSE CS STUDY powered by CodeRaft
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8 Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            8 Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1 PROGRAMMING CONCEPTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    8.1(2) PROGRAMMING CONCEPTS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    8.1(2) PROGRAMMING CONCEPTS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#812-programming-concepts-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1(2) PROGRAMMING CONCEPTS CONTINUED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1(2) PROGRAMMING CONCEPTS CONTINUED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-understand-and-use-arithmetic-logical-and-boolean-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 1 | UNDERSTAND AND USE ARITHMETIC, LOGICAL AND BOOLEAN OPERATORS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-understand-and-use-nested-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 2 | UNDERSTAND AND USE NESTED STATEMENTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-procedures-functions-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 3 | PROCEDURES, FUNCTIONS AND PARAMETERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-global-and-local-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 4 | GLOBAL AND LOCAL VARIABLES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-5-understand-and-use-library-routines" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 5 | UNDERSTAND AND USE LIBRARY ROUTINES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-6-understand-how-to-create-a-maintainable-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 6 | UNDERSTAND HOW TO CREATE A MAINTAINABLE PROGRAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.2%20ARRAYS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2 ARRAYS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.3%20FILE%20HANDLING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3 FILE HANDLING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#812-programming-concepts-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1(2) PROGRAMMING CONCEPTS CONTINUED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1(2) PROGRAMMING CONCEPTS CONTINUED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-understand-and-use-arithmetic-logical-and-boolean-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 1 | UNDERSTAND AND USE ARITHMETIC, LOGICAL AND BOOLEAN OPERATORS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-understand-and-use-nested-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 2 | UNDERSTAND AND USE NESTED STATEMENTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-procedures-functions-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 3 | PROCEDURES, FUNCTIONS AND PARAMETERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-global-and-local-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 4 | GLOBAL AND LOCAL VARIABLES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-5-understand-and-use-library-routines" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 5 | UNDERSTAND AND USE LIBRARY ROUTINES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-6-understand-how-to-create-a-maintainable-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 6 | UNDERSTAND HOW TO CREATE A MAINTAINABLE PROGRAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>8.1(2) PROGRAMMING CONCEPTS</h1>
+
+<h2 id="812-programming-concepts-continued">8.1(2) PROGRAMMING CONCEPTS CONTINUED</h2>
+<h3 id="section-1-understand-and-use-arithmetic-logical-and-boolean-operators">SECTION 1 | UNDERSTAND AND USE ARITHMETIC, LOGICAL AND BOOLEAN OPERATORS</h3>
+<p>This section covers the fundamental operators used in programming: arithmetic, logical, and Boolean operators. Operators are symbols that tell the compiler or interpreter to perform specific mathematical, logical, or relational operations and produce a final result.</p>
+<p><strong>ARITHMETIC OPERATORS</strong></p>
+<ul>
+<li><strong>Addition (+)</strong> | Adds two operands. Example: 5 + 3 results in 8.</li>
+<li><strong>Subtraction (-)</strong> | Subtracts the second operand from the first. Example: 5 - 3 results in 2.</li>
+<li><strong>Division (/)</strong> | Divides the first operand by the second. Example: 10 / 2 results in 5.</li>
+<li><strong>Multiplication (*)</strong> | Multiplies two operands. Example: 5 * 3 results in 15.</li>
+<li><strong>Raised to the Power of (^)</strong> | Raises the first operand to the power of the second. Example: 2 ^ 3 results in 8.</li>
+<li><strong>Modulus (MOD)</strong> | Returns the remainder of dividing the first operand by the second. Example: 10 MOD 3 results in 1.</li>
+<li><strong>Integer Division (DIV)</strong> | Divides the first operand by the second, but returns only the integer part of the quotient. Example: 10 DIV 3 results in 3.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">#Addition</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 8</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">#Subtraction</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">3</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 2</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1">#Division</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 5.0</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1">#Multiplication</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 15</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1">#Raised to the power of</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>  <span class="c1"># In Python, ** is used for exponentiation</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 8</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="c1">#Modulus</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>  <span class="c1"># In Python, % is used for modulus</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 1</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="c1">#Integer Division</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># In Python, // is used for integer division</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 3</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>#Addition
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>RESULT ← 5 + 3
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>OUTPUT RESULT  // Outputs: 8
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>#Subtraction
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>RESULT ← 5 - 3
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>OUTPUT RESULT  // Outputs: 2
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>#Division
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>RESULT ← 10 / 2
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>OUTPUT RESULT  // Outputs: 5
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>#Multiplication
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>RESULT ← 5 * 3
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>OUTPUT RESULT  // Outputs: 15
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>#Raised to the power of
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>RESULT ← 2 ^ 3
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>OUTPUT RESULT  // Outputs: 8
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>#Modulus
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>RESULT ← 10 MOD 3
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>OUTPUT RESULT  // Outputs: 1
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>#Integer Division
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>RESULT ← 10 DIV 3
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>OUTPUT RESULT  // Outputs: 3​
+</code></pre></div></td></tr></table></div>
+<p><strong>LOGICAL OPERATORS</strong>
+Logical operators are used to compare two values, depending on the operator used, it returns either True or False.</p>
+<ul>
+<li><strong>Equal to (=)</strong> | Checks if two operands are equal. Example: 5 = 5 results in True.</li>
+<li><strong>Less than (&lt;)</strong> | Checks if the first operand is less than the second. Example: 5 &lt; 8 results in True.</li>
+<li><strong>Less than or equal to (&lt;=)</strong> | Checks if the first operand is less than or equal to the second. Example: 5 &lt;= 5 results in True.</li>
+<li><strong>Greater than (&gt;)</strong> | Checks if the first operand is greater than the second. Example: 8 &gt; 5 results in True.</li>
+<li><strong>Greater than or equal to (&gt;=)</strong> | Checks if the first operand is greater than or equal to the second. Example: 8 &gt;= 5 results in True.</li>
+<li><strong>Not equal to (&lt;&gt;)</strong> | Checks if two operands are not equal. Example: 5 &lt;&gt; 8 results in True.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">#Equal to </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Outputs: True</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">#Less than</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># Outputs: True</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">#Less than or equal to</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># Outputs: True</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1">#Greater than</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># Outputs: False</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">#Greater than or equal to</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># Outputs: False</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1">#Not equal to </span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">!=</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># In Python, != is used for not equal to​</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>#Equal to 
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>OUTPUT 5 = 5  // Outputs: TRUE
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>#Less than
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>OUTPUT 5 &lt; 8  // Outputs: TRUE
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>#Less than or equal to
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>OUTPUT 5 &lt;= 8  // Outputs: TRUE
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>#Greater than
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>OUTPUT 5 &gt; 8  // Outputs: FALSE
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>#Greater than or equal to
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>​OUTPUT 5 &gt;= 8  // Outputs: FALSE
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>#Not equal to 
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>OUTPUT 5 &lt;&gt; 8  // Outputs: TRUE​
+</code></pre></div></td></tr></table></div>
+<p>An example of the use of a logical operator could be: 
+IF 8 &gt;= 5 THEN
+  OUTPUT "8 is greater than or equal to 5" // Expected to output this message
+ELSE
+  OUTPUT "8 is not greater than or equal to 5"
+ENDIF</p>
+<p><strong>BOOLEAN OPERATORS</strong>
+Boolean operators are used with Boolean values and expressions to make logical comparisons and decisions.</p>
+<ul>
+<li><strong>AND</strong> | Returns True if both operands are true. Example: True AND False results in False.</li>
+<li><strong>OR</strong> | Returns True if at least one of the operands is true. Example: True OR False results in True.</li>
+<li><strong>NOT</strong> | Returns True if the operand is false, and vice versa. Example: NOT True results in False.</li>
+</ul>
+<p>Using <strong>AND
+*<em>In the example below, we will check if a person is eligible to vote. A person is eligible if they are 18 years or older *</em>and</strong> a citizen.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">citizen</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">citizen</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eligible to vote.&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not eligible to vote.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>AGE ← 20
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>CITIZEN ← TRUE
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>IF AGE &gt;= 18 AND CITIZEN = TRUE THEN
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    OUTPUT &quot;Eligible to vote.&quot;
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>ELSE
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    OUTPUT &quot;Not eligible to vote.&quot;
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>ENDIF
+</code></pre></div></td></tr></table></div>
+<p>Using <strong>OR</strong>
+Let's say a person is eligible to vote if they are 18 years or older <strong>or</strong> if they have a special permit, regardless of citizenship.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">17</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">has_special_permit</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">or</span> <span class="n">has_special_permit</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eligible to vote with OR condition.&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not eligible to vote with OR condition.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>AGE ← 17
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>HAS_SPECIAL_PERMIT ← TRUE
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>IF AGE &gt;= 18 OR HAS_SPECIAL_PERMIT = TRUE THEN
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>    OUTPUT &quot;Eligible to vote with OR condition.&quot;
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>ELSE
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    OUTPUT &quot;Not eligible to vote with OR condition.&quot;
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>ENDIF
+</code></pre></div></td></tr></table></div>
+<p>Using <strong>NOT</strong>
+For this scenario, let's say a person is <strong>not</strong> eligible to vote if they are explicitly disqualified, even if they meet the age and citizenship requirements.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">citizen</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">disqualified</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">citizen</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">disqualified</span><span class="p">:</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eligible to vote with NOT condition.&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not eligible to vote with NOT condition.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span>
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>AGE ← 20
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>CITIZEN ← TRUE
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>DISQUALIFIED ← FALSE
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>IF AGE &gt;= 18 AND CITIZEN = TRUE AND NOT DISQUALIFIED = TRUE THEN
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    OUTPUT &quot;Eligible to vote with NOT condition.&quot;
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>ELSE
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>    OUTPUT &quot;Not eligible to vote with NOT condition.&quot;
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>ENDIF
+</code></pre></div></td></tr></table></div>
+<h3 id="section-2-understand-and-use-nested-statements">SECTION 2 | UNDERSTAND AND USE NESTED STATEMENTS</h3>
+<p>Nested statements in programming allow you to place one statement inside another. This can involve both selection (if-else) statements and iteration (loops) statements. Understanding how to effectively use nested statements is crucial for solving more complex problems where decisions are based on multiple conditions or tasks require multiple levels of looping.</p>
+<p><strong>Nested Selection</strong>
+Nested selection involves placing if-else statements inside another if-else statement. This is particularly useful when decisions need to be made based on a series of conditions.</p>
+<p>Example Scenario:
+Suppose we want to determine if a movie is suitable for a viewer based on their age and a parent's permission.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">14</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">parent_permission</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">13</span><span class="p">:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="k">if</span> <span class="n">parent_permission</span><span class="p">:</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are allowed to watch the movie.&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You need a parent&#39;s permission to watch this movie.&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are too young to watch this movie.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>AGE ← 14
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>PARENT_PERMISSION ← TRUE
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>IF AGE &gt;= 13 THEN
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>    IF PARENT_PERMISSION = TRUE THEN
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        OUTPUT &quot;You are allowed to watch the movie.&quot;
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>    ELSE
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>        OUTPUT &quot;You need a parent&#39;s permission to watch this movie.&quot;
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>    ENDIF
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>ELSE
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>    OUTPUT &quot;You are too young to watch this movie.&quot;
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>ENDIF
+</code></pre></div></td></tr></table></div>
+<p><strong>Nested Iteration</strong>
+Nested iteration involves placing a loop inside another loop. This technique is useful for working with multi-dimensional data structures or when a task requires repetitive actions within another set of repetitive actions.</p>
+<p>Nested Iteration Example: Team and Player Template
+Create a template that lists 4 teams, with each team having 6 players. This template can be used for organizing team rosters in sports or games.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># Python code to iterate through teams and players</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>  <span class="c1"># 4 teams</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Team </span><span class="si">{</span><span class="n">team</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>  <span class="c1"># 6 players per team</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Player </span><span class="si">{</span><span class="n">player</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="nb">print</span><span class="p">()</span>  <span class="c1"># Blank line after each team for better readability</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>FOR TEAM ← 1 TO 4
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    OUTPUT &quot;Team &quot;, TEAM, &quot;:&quot;
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>    FOR PLAYER ← 1 TO 6
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>        OUTPUT &quot;\tPlayer &quot;, PLAYER
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>    ENDFOR
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>    OUTPUT &quot;&quot;  // Blank line after each team for better readability
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>ENDFOR
+</code></pre></div></td></tr></table></div>
+<p>Explanation</p>
+<ul>
+<li>Outer Loop (Teams) | Iterates from 1 to 4, representing the 4 teams.</li>
+<li>Inner Loop (Players) | For each team, iterates from 1 to 6, representing the 6 players in each team.</li>
+<li>Output | The structure outputs the team number followed by a list of player numbers, using tabulation (\t in Python or represented similarly in pseudocode) for indentation to clearly denote the players belonging to each team.</li>
+</ul>
+<p>This example illustrates the practical application of nested loops to organize and present hierarchical data in a structured format. By adjusting the range values in the loops, this approach can be easily adapted to different numbers of teams and players, showcasing the flexibility and utility of nested iteration in programming</p>
+<p><strong>Limitations on Nesting</strong>
+While nesting can be powerful, it's important not to overcomplicate your code. For this syllabus, candidates are not required to write more than three levels of nested statements. This limitation helps keep the code more readable and manageable.</p>
+<p>Nested statements, both selection and iteration, allow for complex decision-making and data processing. By carefully structuring these nested statements, programmers can tackle complex problems while keeping their code efficient and understandable. Remember, the key to effectively using nested statements is to keep your logic clear and avoid unnecessary complexity.</p>
+<h3 id="section-3-procedures-functions-and-parameters">SECTION 3 | PROCEDURES, FUNCTIONS AND PARAMETERS</h3>
+<p>In programming, procedures and functions are fundamental concepts that allow for code reuse, modularity, and improved readability. Both are blocks of code that perform a specific task, but they have a key difference in how they are used and the value they return.</p>
+<p><strong>What is Meant by Procedures, Functions, and Parameters</strong></p>
+<ul>
+<li><strong>Procedures</strong> | A procedure is a block of code that performs a specific action but does not return a value to the caller. It is executed when called and is used to encapsulate code for tasks that need to be performed multiple times throughout a program.</li>
+<li><strong>Functions</strong> | A function, like a procedure, is a block of code that performs a specific task, but it returns a value to the caller. Functions can be used to perform calculations, process data, and then return the result of that process.</li>
+<li><strong>Parameters</strong> | Both procedures and functions can accept parameters (also known as arguments), which are pieces of data passed into them. These parameters allow procedures and functions to operate on different data without being rewritten for each unique case. Parameters make procedures and functions more versatile and adaptable.</li>
+</ul>
+<p>Below is an example of a <strong>procedure</strong> without any parameters</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">def</span> <span class="nf">display_message</span><span class="p">():</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from a procedure!&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="c1"># Calling the procedure</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="n">display_message</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>PROCEDURE DisplayMessage
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    OUTPUT &quot;Hello from a procedure!&quot;
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>ENDPROCEDURE
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>CALL DisplayMessage
+</code></pre></div></td></tr></table></div>
+<p>Below is an example of a <strong>procedure</strong> with Parameters</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="c1"># Calling the procedure with a parameter</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="n">greet_user</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>PROCEDURE GreetUser(Username)
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    OUTPUT &quot;Hello, &quot;, Username, &quot;!&quot;
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>ENDPROCEDURE
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>CALL GreetUser(&quot;Alice&quot;)
+</code></pre></div></td></tr></table></div>
+<p>Below is an example of a <strong>function</strong> without Parameters</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">def</span> <span class="nf">get_magic_number</span><span class="p">():</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>    <span class="k">return</span> <span class="mi">42</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="c1"># Calling the function and printing its return value</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">get_magic_number</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>FUNCTION GetMagicNumber
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    RETURN 42
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>ENDFUNCTION
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>OUTPUT GetMagicNumber()
+</code></pre></div></td></tr></table></div>
+<p>Below is an example of a <strong>function</strong> with Parameters</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>    <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="c1"># Calling the function with two parameters</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>FUNCTION AddNumbers(Number1, Number2)
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    RETURN Number1 + Number2
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>ENDFUNCTION
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>RESULT ← AddNumbers(5, 7)
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>OUTPUT RESULT
+</code></pre></div></td></tr></table></div>
+<p>Understanding and utilising procedures and functions with or without parameters is crucial for creating structured, reusable, and efficient code. While procedures perform tasks without returning a value, functions perform tasks and return a value, making both essential for modular programming. Parameters add flexibility, allowing these blocks of code to work with various data inputs.</p>
+<h3 id="section-4-global-and-local-variables">SECTION 4 | GLOBAL AND LOCAL VARIABLES</h3>
+<p>Variables in programming are used to store data that your program can manipulate. The scope of a variable determines where it can be accessed within your code. This leads us to the distinction between local and global variables, which is fundamental for managing data flow and avoiding unintended side effects in your programs.</p>
+<p><strong>Local Variables</strong>
+Local variables are declared inside a procedure or function and can only be accessed within that block. Their scope is limited to the block of code where they are defined, making them invisible to the rest of the program. This encapsulation helps in preventing conflicts and errors in large programs.</p>
+<p>Advantages</p>
+<ul>
+<li>Encapsulation | Keeps variables confined to the function or procedure, avoiding naming conflicts. This is especially important when large teams of programmers are working on the same project.</li>
+<li>Memory Efficiency | Memory used by local variables is freed once the block of code (function or procedure) finishes executing.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">def</span> <span class="nf">calculate_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>  <span class="c1"># &#39;result&#39; is a local variable</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>    <span class="k">return</span> <span class="n">result</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">calculate_sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="c1"># print(result)  # This would raise an error, as &#39;result&#39; is not accessible here</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>FUNCTION CalculateSum(A, B)
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>    RESULT ← A + B  // &#39;RESULT&#39; is a local variable
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>    RETURN RESULT
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>ENDFUNCTION
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>OUTPUT CalculateSum(5, 7)
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>// OUTPUT RESULT  // This would be incorrect, as &#39;RESULT&#39; is not accessible here
+</code></pre></div></td></tr></table></div>
+<p><strong>Global Variables</strong>
+Global variables are declared outside any procedure or function and can be accessed and modified by any part of the program. While they offer convenience for small scripts or when sharing data between multiple functions, they should be used judiciously.</p>
+<p>Advantages</p>
+<ul>
+<li>Accessibility | Can be accessed from any part of the program, useful for shared data.</li>
+<li>Persistence | Retains value throughout the program execution, useful for data that needs to be accessed or modified by multiple functions.</li>
+</ul>
+<p>Disadvantages</p>
+<ul>
+<li>Risk of Unintended Modification | Can lead to bugs that are hard to track since any part of the program can change the variable.</li>
+<li>Reduced Clarity | Makes it harder to track the flow of data within the program.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span>
+<span class="normal"><a href="#__codelineno-24-7">7</a></span>
+<span class="normal"><a href="#__codelineno-24-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">global_number</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># &#39;global_number&#39; is a global variable</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="k">def</span> <span class="nf">modify_global_number</span><span class="p">():</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>    <span class="k">global</span> <span class="n">global_number</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    <span class="n">global_number</span> <span class="o">+=</span> <span class="mi">5</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="n">modify_global_number</span><span class="p">()</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">global_number</span><span class="p">)</span>  <span class="c1"># Outputs: 15</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span>
+<span class="normal"><a href="#__codelineno-25-6">6</a></span>
+<span class="normal"><a href="#__codelineno-25-7">7</a></span>
+<span class="normal"><a href="#__codelineno-25-8">8</a></span>
+<span class="normal"><a href="#__codelineno-25-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>GLOBAL_NUMBER ← 10  // &#39;GLOBAL_NUMBER&#39; is a global variable
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>PROCEDURE ModifyGlobalNumber
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    GLOBAL GLOBAL_NUMBER
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>    GLOBAL_NUMBER ← GLOBAL_NUMBER + 5
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>ENDPROCEDURE
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a>CALL ModifyGlobalNumber
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>OUTPUT GLOBAL_NUMBER  // Outputs: 15
+</code></pre></div></td></tr></table></div>
+<p>Understanding the distinction between local and global variables is crucial for writing clear, maintainable, and error-free code. Local variables provide encapsulation and are preferred for data that does not need to be shared across different parts of the program. Global variables offer convenience for shared data but come with risks of unintended modifications and should be used sparingly to maintain the integrity of your program's logic.</p>
+<h3 id="section-5-understand-and-use-library-routines">SECTION 5 | UNDERSTAND AND USE LIBRARY ROUTINES</h3>
+<p>Library routines are pre-written functions or procedures provided by a programming language's standard library or external libraries. These routines offer convenient ways to perform common tasks without the need to reimplement them. Some library routines are built in and some you may need to import. Understanding how to use these routines can significantly speed up development time and ensure more reliable and efficient code.</p>
+<p>In this section, we will discuss the use of several common library routines: MOD, DIV, ROUND, and RANDOM.</p>
+<p><strong>MOD</strong>
+The MOD routine calculates the remainder of a division operation between two numbers.
+For example 10 divided by 3 is 3 remainder 1, MOD just returns the remainder.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">remainder</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>  <span class="c1"># Using the modulus operator for MOD</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>  <span class="c1"># Outputs: 1</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>REMAINDER ← 10 MOD 3
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>OUTPUT REMAINDER  // Outputs: 1
+</code></pre></div></td></tr></table></div>
+<p><strong>DIV</strong>
+The DIV routine performs integer division between two numbers, discarding any fractional part.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># Using the floor division operator for DIV</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs: 3</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>RESULT ← 10 DIV 3
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>OUTPUT RESULT  // Outputs: 3
+</code></pre></div></td></tr></table></div>
+<p><strong>ROUND</strong>
+The ROUND routine rounds a floating-point number to the nearest whole number or to a specified number of decimal places.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">rounded_number</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Rounds to 2 decimal places</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">rounded_number</span><span class="p">)</span>  <span class="c1"># Outputs: 3.14</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>ROUNDED_NUMBER ← ROUND(3.14159, 2)
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>OUTPUT ROUNDED_NUMBER  // Outputs: 3.14
+</code></pre></div></td></tr></table></div>
+<p><strong>RANDOM</strong>
+The RANDOM routine generates a random number. The specifics can vary; for example, you might generate a random number within a range.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Generates a random number between 1 and 10</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">random_number</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>// Assuming a RANDOM function that takes a range and returns an integer
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>RANDOM_NUMBER ← RANDOM(1, 10)
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>OUTPUT RANDOM_NUMBER
+</code></pre></div></td></tr></table></div>
+<p><strong>WHY USE LIBRARY ROUTINES</strong>
+Library routines like MOD, DIV, ROUND, and RANDOM are essential tools in a programmer's toolkit, allowing for the efficient implementation of common mathematical and randomization tasks. By leveraging these routines, developers can write less code, reduce the likelihood of errors, and improve the readability and maintainability of their programs. Understanding how to use these routines is crucial for efficient programming and solving a wide array of problems.</p>
+<h3 id="section-6-understand-how-to-create-a-maintainable-program">SECTION 6 | UNDERSTAND HOW TO CREATE A MAINTAINABLE PROGRAM</h3>
+<p>Creating maintainable programs is crucial for ensuring that code can be easily understood, updated, and extended by others, including your future self. Key practices that contribute to maintainability include the use of meaningful identifiers, effective commenting, and the structured use of procedures and functions. Below, we explore these aspects in detail.</p>
+<p><strong>Meaningful Identifiers</strong>
+Meaningful identifiers make your code readable and self-explanatory. They are names given to variables, constants, arrays, procedures, and functions that describe their purpose or the data they hold.</p>
+<ul>
+<li><strong>Variables</strong> | Use names that describe the data or purpose, such as userAge or totalAmount.</li>
+<li><strong>Constants</strong> | Name constants in a way that indicates their unchangeable value, like MAX_SIZE or INTEREST_RATE.</li>
+<li><strong>Arrays</strong> | Choose names that reflect the collection they represent, for instance, studentGrades or productPrices.</li>
+<li><strong>Procedures and Functions</strong> | Their names should describe the action they perform or the result they return, such as calculateTotal or findMaximum.</li>
+</ul>
+<p><strong>The Commenting Feature</strong>
+Comments are not executed as part of the program but serve as notes to the programmer and others who may work on the code later. They explain what the code does, why certain decisions were made, and can outline complex logic.</p>
+<ul>
+<li><strong>Inline Comments</strong> | Used to describe specific lines of code or logic. Place them at the end of the line they refer to.</li>
+<li><strong>Block Comments</strong> | Used for providing descriptions at the start of functions or major sections of code, explaining the overall purpose or behaviour.</li>
+</ul>
+<p><strong>Procedures and Functions</strong>
+Organising code into procedures and functions is crucial for abstraction, code reuse, and reducing redundancy. They allow for compartmentalizing code into logical units that can be easily tested and debugged.</p>
+<ul>
+<li><strong>Encapsulation</strong> | Group related logic into functions and procedures to hide complexity and make the main program flow clear and concise.</li>
+<li><strong>Modularity</strong> | Break down the program into smaller, manageable pieces that can be developed and tested independently.</li>
+</ul>
+<p><strong>Relevant and Appropriate Commenting of Syntax</strong>
+While meaningful identifiers can make the code self-explanatory to some extent, complex logic or unusual solutions may require additional explanation. Commenting becomes crucial in these scenarios.</p>
+<ul>
+<li><strong>Why, not what</strong> | Focus on explaining why a certain approach was taken, not what the code does (which should be apparent from the code itself and meaningful identifiers).</li>
+<li><strong>Updates and Changes</strong> | When modifying code, update or add comments to reflect changes, especially if the logic or purpose of the code has evolved.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span>
+<span class="normal"><a href="#__codelineno-34-11">11</a></span>
+<span class="normal"><a href="#__codelineno-34-12">12</a></span>
+<span class="normal"><a href="#__codelineno-34-13">13</a></span>
+<span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<span class="normal"><a href="#__codelineno-34-15">15</a></span>
+<span class="normal"><a href="#__codelineno-34-16">16</a></span>
+<span class="normal"><a href="#__codelineno-34-17">17</a></span>
+<span class="normal"><a href="#__codelineno-34-18">18</a></span>
+<span class="normal"><a href="#__codelineno-34-19">19</a></span>
+<span class="normal"><a href="#__codelineno-34-20">20</a></span>
+<span class="normal"><a href="#__codelineno-34-21">21</a></span>
+<span class="normal"><a href="#__codelineno-34-22">22</a></span>
+<span class="normal"><a href="#__codelineno-34-23">23</a></span>
+<span class="normal"><a href="#__codelineno-34-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="c1">#MEANINGFUL IDENTIFIERS - Good practice</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="n">monthlySalary</span> <span class="o">=</span> <span class="mi">3000</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="n">interestRateAnnual</span> <span class="o">=</span> <span class="mf">0.05</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="c1">#MEANINGFUL IDENTIFIERS - Poor practice</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">3000</span>  <span class="c1"># It&#39;s not clear what this represents</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">0.05</span>  <span class="c1"># Ambiguous</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="c1"># COMMENTING</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="c1"># Calculate yearly interest</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a><span class="c1"># Using compound interest formula for annual compounding</span>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="n">yearlyInterest</span> <span class="o">=</span> <span class="n">principalAmount</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interestRateAnnual</span><span class="p">)</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a>
+<a id="__codelineno-34-14" name="__codelineno-34-14"></a><span class="c1">#BLOCK COMMENTING</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15"></a><span class="k">def</span> <span class="nf">calculateYearlyInterest</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="sd">    Calculate the yearly interest.</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="sd">    Parameters:</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19"></a><span class="sd">    - principal: The principal amount.</span>
+<a id="__codelineno-34-20" name="__codelineno-34-20"></a><span class="sd">    - rate: The annual interest rate. </span>
+<a id="__codelineno-34-21" name="__codelineno-34-21"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-34-22" name="__codelineno-34-22"></a><span class="sd">    The interest amount for one year.</span>
+<a id="__codelineno-34-23" name="__codelineno-34-23"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24"></a>    <span class="k">return</span> <span class="n">principal</span> <span class="o">*</span> <span class="n">rate</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span>
+<span class="normal"><a href="#__codelineno-35-12">12</a></span>
+<span class="normal"><a href="#__codelineno-35-13">13</a></span>
+<span class="normal"><a href="#__codelineno-35-14">14</a></span>
+<span class="normal"><a href="#__codelineno-35-15">15</a></span>
+<span class="normal"><a href="#__codelineno-35-16">16</a></span>
+<span class="normal"><a href="#__codelineno-35-17">17</a></span>
+<span class="normal"><a href="#__codelineno-35-18">18</a></span>
+<span class="normal"><a href="#__codelineno-35-19">19</a></span>
+<span class="normal"><a href="#__codelineno-35-20">20</a></span>
+<span class="normal"><a href="#__codelineno-35-21">21</a></span>
+<span class="normal"><a href="#__codelineno-35-22">22</a></span>
+<span class="normal"><a href="#__codelineno-35-23">23</a></span>
+<span class="normal"><a href="#__codelineno-35-24">24</a></span>
+<span class="normal"><a href="#__codelineno-35-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>#MEANINGFUL IDENTIFIERS - Good practice
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a>MonthlySalary ← 3000
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>InterestRateAnnual ← 0.05
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a>#MEANINGFUL IDENTIFIERS - Poor practice
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>a ← 3000  // It&#39;s not clear what this represents
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a>b ← 0.05  // Ambiguou
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a># COMMENTING
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a>// Calculate yearly interest using compound interest formula for annual compounding
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a>YearlyInterest ← PrincipalAmount * (1 + InterestRateAnnual)
+<a id="__codelineno-35-12" name="__codelineno-35-12"></a>
+<a id="__codelineno-35-13" name="__codelineno-35-13"></a>#BLOCK COMMENTING
+<a id="__codelineno-35-14" name="__codelineno-35-14"></a>// Procedure to calculate yearly interest
+<a id="__codelineno-35-15" name="__codelineno-35-15"></a>PROCEDURE CalculateYearlyInterest(Principal, Rate)
+<a id="__codelineno-35-16" name="__codelineno-35-16"></a>    /*
+<a id="__codelineno-35-17" name="__codelineno-35-17"></a>    Calculate the yearly interest.
+<a id="__codelineno-35-18" name="__codelineno-35-18"></a>    Parameters:
+<a id="__codelineno-35-19" name="__codelineno-35-19"></a>    - Principal: The principal amount.
+<a id="__codelineno-35-20" name="__codelineno-35-20"></a>    - Rate: The annual interest rate. 
+<a id="__codelineno-35-21" name="__codelineno-35-21"></a>    Returns:
+<a id="__codelineno-35-22" name="__codelineno-35-22"></a>    The interest amount for one year.
+<a id="__codelineno-35-23" name="__codelineno-35-23"></a>    */
+<a id="__codelineno-35-24" name="__codelineno-35-24"></a>    RETURN Principal * Rate
+<a id="__codelineno-35-25" name="__codelineno-35-25"></a>ENDPROCEDURE
+</code></pre></div></td></tr></table></div>
+<p>Creating a maintainable program involves thoughtful naming, systematic organization, and clear documentation of your code. These practices not only make the code easier to understand and modify but also facilitate collaboration and ensure the longevity of your software projects</p>
+<p>SAMPLE PROGRAMMING QUESTION</p>
+<p>The names of students are stored in a one-dimensional (1D) array Student[] of type string. A separate two-dimensional (2D) array Scores[] stores the latest test scores for each student. The array already contains the scores for each student in two subjects: Math and English.</p>
+<ul>
+<li>Math scores should be in the range 0 to 100 inclusive.</li>
+<li>English scores should be in the range 0 to 100 inclusive.</li>
+<li>The student ID given to each student is used as the index for both arrays, and this is a value between 1 and 100 inclusive.</li>
+</ul>
+<p>When the data for a student is checked, a warning is given if any of the scores are out of range. If both scores are out of range, a severe warning is given.</p>
+<p>Write a function, using pseudocode or program code, that meets the following requirements:</p>
+<ul>
+<li>Takes the student ID as a parameter.</li>
+<li>Checks if the ID is valid.</li>
+<li>Returns an error message if the ID is not valid.</li>
+<li>
+<p>If the ID is valid:</p>
+</li>
+<li>
+<p>Returns the student’s name.</p>
+</li>
+<li>Returns "Scores are valid" if both scores are within range.</li>
+<li>Returns "Warning: Math score out of range" or "Warning: English score out of range" if one score is out of range.</li>
+<li>Returns "Severe warning: Both Math and English scores out of range" if both scores are out of range.</li>
+</ul>
+<p>You must use pseudocode or program code and add comments to explain how your code works. You do not need to initialize the data in the arrays.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-360RS2BYLD"></script>
+      
+    
+  </body>
+</html>
