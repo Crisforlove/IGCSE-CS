@@ -9,22 +9,22 @@
       
       
       
-        <link rel="prev" href="../../9%20DATABASES/9.4%20%20SQL/">
+        <link rel="prev" href="../1.1.1%20WHY%20COMPUTERS%20USE%20BINARY/">
       
       
-        <link rel="next" href="../10.2%20%20USING%20LOGIC%20GATES/">
+        <link rel="next" href="../1.1.3%20%20HEXADECIMAL%20USES/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
     
     
       
-        <title>10.1 LOGIC SYMBOLS AND FUNCTIONS - IGCSE CS STUDY powered by CodeRaft</title>
+        <title>1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS - IGCSE CS STUDY powered by CodeRaft</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
       
 
@@ -43,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#101-logic-symbols-and-functions" class="md-skip">
+        <a href="#112-binary-hex-and-convertig-between-number-systems" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+    <a href="../../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10.1  LOGIC SYMBOLS AND FUNCTIONS
+              1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS
             
           </span>
         </div>
@@ -187,7 +187,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+    <a href="../../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -217,7 +217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -234,17 +234,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -258,7 +260,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             1 DATA REPRESENTATION
@@ -269,17 +271,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -293,7 +297,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             1.1 NUMBER SYSTEMS
@@ -307,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.1%20WHY%20COMPUTERS%20USE%20BINARY/" class="md-nav__link">
+      <a href="../1.1.1%20WHY%20COMPUTERS%20USE%20BINARY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -325,10 +329,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.2%20BINARY%2C%20HEX%20AND%20CONVERTIG%20BETWEEN%20NUMBER%20SYSTEMS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -337,6 +359,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#112-binary-hex-and-convertig-between-number-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-binary-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 1 | BINARY NUMBERS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -349,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.3%20%20HEXADECIMAL%20USES/" class="md-nav__link">
+      <a href="../1.1.3%20%20HEXADECIMAL%20USES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -370,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1 DATA REPRESENTATION/1.1 NUMBER SYSTEMS/1.1.4  BINARY ADDITION AND OVERFLOW" class="md-nav__link">
+      <a href="../../../1 DATA REPRESENTATION/1.1 NUMBER SYSTEMS/1.1.4  BINARY ADDITION AND OVERFLOW" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -391,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.5%20%20BINARY%20SHIFT/" class="md-nav__link">
+      <a href="../1.1.5%20%20BINARY%20SHIFT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -412,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.6%20%20TWO%27S%20COMPLEMENT/" class="md-nav__link">
+      <a href="../1.1.6%20%20TWO%27S%20COMPLEMENT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.1%20%20TEXT%2C%20SOUND%20AND%20IMAGES/" class="md-nav__link">
+      <a href="../../1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.1%20%20TEXT%2C%20SOUND%20AND%20IMAGES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.2%20%20SOUND%20REPRESENTATION/" class="md-nav__link">
+      <a href="../../1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.2%20%20SOUND%20REPRESENTATION/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.3%20%20IMAGE%20REPRESENTATION/" class="md-nav__link">
+      <a href="../../1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.3%20%20IMAGE%20REPRESENTATION/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -582,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.1%20%20DATA%20STORAGE%20MEASUREMENTS/" class="md-nav__link">
+      <a href="../../1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.1%20%20DATA%20STORAGE%20MEASUREMENTS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.2%20%20CALCULATING%20FILE%20SIZE/" class="md-nav__link">
+      <a href="../../1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.2%20%20CALCULATING%20FILE%20SIZE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.1%282%29%20PROGRAMMING%20CONCEPTS%20CONTINUED/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.1%282%29%20PROGRAMMING%20CONCEPTS%20CONTINUED/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.2%20ARRAYS/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.2%20ARRAYS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.3%20FILE%20HANDLING/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.3%20FILE%20HANDLING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -800,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.1%20%20DEFINING%20A%20DATABASE/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.1%20%20DEFINING%20A%20DATABASE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.2%20%20DATA%20TYPES/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.2%20%20DATA%20TYPES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.3%20%20PRIMARY%20KEYS/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.3%20%20PRIMARY%20KEYS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.4%20%20SQL/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.4%20%20SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,19 +946,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -914,7 +970,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             10 BOOLEAN LOGIC
@@ -925,28 +981,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    10.1  LOGIC SYMBOLS AND FUNCTIONS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../10%20BOOLEAN%20LOGIC%E2%80%8B%20/10.1%20%20LOGIC%20SYMBOLS%20AND%20FUNCTIONS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,33 +993,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#101-logic-symbols-and-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      10.1 | LOGIC SYMBOLS AND FUNCTIONS
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -994,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.2%20%20USING%20LOGIC%20GATES/" class="md-nav__link">
+      <a href="../../../10%20BOOLEAN%20LOGIC%E2%80%8B%20/10.2%20%20USING%20LOGIC%20GATES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../0%20Memorize/IGCSE%20Computer%20Science%20Booklet.pdf" class="md-nav__link">
+      <a href="../../../0%20Memorize/IGCSE%20Computer%20Science%20Booklet.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,9 +1114,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#101-logic-symbols-and-functions" class="md-nav__link">
+  <a href="#112-binary-hex-and-convertig-between-number-systems" class="md-nav__link">
     <span class="md-ellipsis">
-      10.1 | LOGIC SYMBOLS AND FUNCTIONS
+      1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-binary-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION 1 | BINARY NUMBERS
     </span>
   </a>
   
@@ -1129,212 +1149,110 @@
   
 
 
-  <h1>10.1  LOGIC SYMBOLS AND FUNCTIONS</h1>
+  <h1>1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS</h1>
 
-<h2 id="101-logic-symbols-and-functions">10.1 | LOGIC SYMBOLS AND FUNCTIONS</h2>
-<p><strong>WHAT ARE LOGIC GATES</strong></p>
-<p>Logic gates are a major component of a computers hardware, there are usually thousands of logic gates in the circuits of computers. Logic gates act as a switch and control the flow of electricity through them depending on the combination of input they receive.</p>
-<p>The types of logic gates discussed in this section are:</p>
+<h2 id="112-binary-hex-and-convertig-between-number-systems">1.1.2 BINARY, HEX AND CONVERTIG BETWEEN NUMBER SYSTEMS</h2>
+<p><strong>OBJECTIVES</strong>
+<strong>1.1.2 (a) Understand the denary, binary and hexadecimal number systems</strong></p>
+<p>• Denary is a base 10 system</p>
+<p>• Binary is a base 2 system</p>
+<p>• Hexadecimal is a base 16 system</p>
+<p><strong>1.1.2(b) Convert between (i) positive denary and positive binary (ii) positive denary and positive hexadecimal (iii) positive hexadecimal and positive binary</strong></p>
+<p>• Values used will be integers only</p>
+<p>• Conversions in both directions, e.g. denary to binary or binary to denary</p>
+<p>• Maximum binary number length of 16-bit</p>
+<p>Understanding different number systems is crucial in computer science. This section covers the basics of denary, binary, and hexadecimal systems. Denary, or decimal, is the base 10 system we use daily. Binary is the base 2 system, essential for computer operations, using only digits 0 and 1. Hexadecimal is a base 16 system, utilising digits 0-9 and letters A-F. You'll learn to convert between positive denary and binary, denary and hexadecimal, and hexadecimal and binary, focusing on integer values and a maximum 16-bit binary length.</p>
+<p><strong>Denary System (Base 10)</strong></p>
 <ul>
-<li>NOT Gate ( represented with <strong>Ā)</strong></li>
-<li>OR Gate (represented with A + B)</li>
-<li>NOR Gate</li>
-<li>AND Gate (represented with A x B or A · B )</li>
-<li>NAND Gate</li>
-<li>XOR Gate ( Represented with ⊕ )</li>
+<li>Denary, or decimal, is our everyday number system.</li>
+<li>It uses 10 digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+<li>Each digit's position represents a power of 10.</li>
 </ul>
-<p>Each of the various working of the logic gates can be illustrated in Truth Tables. As circuits get big and multiple logic gates or used together it is good practice to use truth tables to trace the outcomes. Most truth tables will replace the text ON and OFF with 1 and 0.</p>
-<p>THE <strong>NOT</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th>The <strong>NOT</strong> gate is the only gate with just one input. The NOT gate simply reverses the input, if the input is ON then the OUTPUT is OFF, if the input is OFF then the output is on.</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/not-gate-orig_2.jpg" />NOT GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>The image above illustrates a NOT gate, it is the circle that symbolises the NOT and this circle is also used on other gates discussed later. Below is the truth table for the NOT gate.</p>
-<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/not-gate-truth-table-orig_2.jpg" /></p>
-<p>NOT GATE TRUTH TABLE</p>
-<p>The NOT gate can be represented in Boolean Algebra by placing a combining overbar over the values to pass through a NOT gate, so NOT A can be represented as <strong>Ā</strong></p>
-<p>THE <strong>OR</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th>The OR gate will give an output value of ON if any of the inputs are ON.</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/or-gate_2.jpg" />OR GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>The OR gate can be viewed as the mathematical equivalent of addition.  A + 0 = A A + A = A 0 + 0 = 0 A + Ā = 1 Notably different from normal mathematics as in boolean logic the above shows the the sum of a variable will equal the variable, for example 1 + 1 = 1</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/or-gate-truth-table_2.jpg" />OR GATE TRUTH TABLE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>NOR</strong> GATE</p>
-<p>The NOR Gate or <strong>N</strong>OT <strong>OR</strong> Gate will have an output if none of the inputs are 1. The NOR gate has a circle on the output to define the NOT part of the gate. You can see this as the opposite of an OR gate.</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/screenshot-2022-02-09-at-09-34-57_2.png" />NOR GATE TRUTH TABLE</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/nor_2.jpg" />NOR GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>AND</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th>The AND gate will only give an output when both inputs are ON, in other works input one AND input two need to be ON to make the output ON.</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/and-gate-orig_2.jpg" />AND GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/and-gate-truth-table_2.jpg" />AND GATE TRUTH TABLE</th>
-<th>The AND gate can be viewed are the mathematical equivalent to multiplication. A x 0 = 0 A x 1 = A A x A = A A x Ā = 0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>NAND</strong> GATE</p>
-<p>The NAND Gate or <strong>N</strong><strong>OT</strong> <strong>AND</strong> Gate will have an output when the two inputs are <strong>not</strong> ON. Or with a three input NAND gate when all 3 inputs are not ON.</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/nand-truth-table_2.jpg" />NAND GATE TRUTH TABLE</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/nand-gate_2.jpg" />THE NAND GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>XOR</strong> GATE</p>
-<p>The XOR gate or e<strong>X</strong>clusive <strong>OR</strong> will only produce an output it the two inputs are different values.</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/xor-gate_2.jpg" />XOR TRUTH TABLE</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/xor_2.jpg" />THE XOR GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>XNOR</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/screenshot-2022-02-10-at-07-46-55_1.png" /></th>
-<th>The exclusive not or will be 1 if both input values are the same.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>LOGIC GATE QUESTIONS</strong></p>
-<p><strong>1: What does the NOT gate do?</strong></p>
-<p>A. Outputs true if both inputs are true</p>
-<p>B. Inverts the input signal</p>
-<p>C. Outputs true if either input is true</p>
-<p>D. Outputs true if both inputs are false</p>
-<p><strong>2: In an AND gate, the output is true when:</strong></p>
-<p>A. Any one of the inputs is true</p>
-<p>B. None of the inputs are true</p>
-<p>C. Both inputs are true</p>
-<p>D. Both inputs are false</p>
-<p><strong>3: Which gate will have a true output when either of its inputs is true?</strong></p>
-<p>A. NOT</p>
-<p>B. AND</p>
-<p>C. OR</p>
-<p>D. NAND</p>
-<p><strong>4: What is the output of a NAND gate when both inputs are true?</strong></p>
-<p>A. True</p>
-<p>B. False</p>
-<p>C. The same as the input</p>
-<p>D. Can't be determined</p>
-<p><strong>5: The NOR gate outputs true when:</strong></p>
-<p>A. Both inputs are true</p>
-<p>B. Either input is true</p>
-<p>C. Neither input is true</p>
-<p>D. Inputs are different</p>
-<p><strong>6: An XOR (Exclusive OR) gate outputs true if:</strong></p>
-<p>A. Both inputs are true</p>
-<p>B. Both inputs are false</p>
-<p>C. The inputs are different</p>
-<p>D. The inputs are the same</p>
-<p><strong>7: Which statement is true about the OR gate?</strong></p>
-<p>A. It outputs false only when both inputs are false</p>
-<p>B. It always outputs true</p>
-<p>C. It outputs true only when both inputs are true</p>
-<p>D. It inverts the input signal</p>
-<p><strong>8: If an AND gate has an input of 1 and 0, the output will be:</strong></p>
-<p>A. 1</p>
-<p>B. 0</p>
-<p>C. The same as the input</p>
-<p>D. Can't be determined</p>
-<p><strong>9: In a NAND gate, if one input is 0 and the other is 1, the output will be:</strong></p>
-<p>A. 1</p>
-<p>B. 0</p>
-<p>C. The same as the input</p>
-<p>D. Inverted</p>
-<p><strong>10: Which gate behaves like an OR gate followed by a NOT gate?</strong></p>
-<p>A. AND</p>
-<p>B. XOR</p>
-<p>C. NOR</p>
-<p>D. NAND</p>
+<p><strong>Binary System (Base 2)</strong></p>
+<ul>
+<li>Binary is used in computers and digital systems.</li>
+<li>It uses only two digits: 0 and 1.</li>
+<li>Each digit's position represents a power of 2.</li>
+</ul>
+<p><strong>Hexadecimal System (Base 16)</strong></p>
+<ul>
+<li>Hexadecimal is often used in computing where compact representation is needed.</li>
+<li>It uses 16 symbols: 0-9 and A-F (where A=10, B=11, ..., F=15).</li>
+<li>Each digit's position represents a power of 16.</li>
+</ul>
+<h2 id="section-1-binary-numbers">SECTION 1 | BINARY NUMBERS</h2>
+<p>The number system we all know has Units, Tens, Hundreds, Thousands and so on, we call this traditional number system the <strong>Denary</strong> number system. The binary number system is different, it has 1s, 2s, 4s, 8s, 16s, 32s and so on. The denery number system is the system you learn in maths and is a base 10 system, the Binary system however, is a base 2 system, this means in Binary that only one of two possible values can go in each column heading, a zero or a one. These ones and zeros are called <strong>BITs.</strong> </p>
+<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/binaryintro_orig.png" /></p>
+<p>Like in traditional math if you take the value from each column and multiply it by the column header you get the total value of the number. In the example above, to the left we have (1 x 32) + (1 x 8) + (1 x 4) = 44</p>
+<p>So <strong>Binary 00101100 is equivalent to Denary 44</strong>
+Note: If the right most (the least significant) binary digit is a 1 then binary value must be representing an odd number.</p>
+<p>Eight BITs make a <strong>Byte</strong>, for example 10101010 is a byte. The examinations papers frequently use bytes, however for this course you need to be able to work with up to 16 BITs and calculators are not allowed.</p>
+<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/binary16bit_orig.png" /></p>
+<p>With 16 bits we could uniquely represent 2^16 (65536) different values, which is close to enough to encode every letter, number and character of every language.</p>
+<p><strong>TERMINOLOGY</strong></p>
+<p><strong>Denary (Decimal)</strong></p>
+<ul>
+<li><strong>Definition:</strong> The base-10 number system used in everyday mathematics.</li>
+<li><strong>Example:</strong> 42 in denary represents four tens and two ones.</li>
+</ul>
+<p><strong>Binary</strong></p>
+<ul>
+<li><strong>Definition:</strong> The base-2 number system used in computing and digital electronics. </li>
+<li>
+<p><strong>Example:</strong> 1011 in binary represents one eight, zero fours, one two, and one one.</p>
+</li>
+<li>
+<p><strong>Bit |</strong>The smallest unit of data in a computer, representing a binary digit (0 or 1).</p>
+</li>
+<li><strong>Nibble |</strong> A group of four binary digits (bits) or half a byte.</li>
+<li><strong>Byte |</strong> A unit of digital information consisting of eight bits, commonly used to represent characters.</li>
+</ul>
+<p><strong>Hexadecimal</strong></p>
+<ul>
+<li><strong>Definition:</strong> The base-16 number system often used in computing for compact representation.</li>
+<li><strong>Example:</strong> 1F in hexadecimal represents one sixteen and fifteen ones.</li>
+</ul>
+<p><strong>QUESTIONS</strong></p>
+<p>1: What is the binary equivalent of the denary number 13?</p>
+<p>a) 1100</p>
+<p>b) 1001</p>
+<p>c) 1110</p>
+<p>d) 1101</p>
+<p>2: What is the denary equivalent of the binary number 101011?</p>
+<p>a) 41</p>
+<p>b) 43</p>
+<p>c) 45</p>
+<p>d) 47</p>
+<p>3: What is the HEX equivalent of the denary number 1024?</p>
+<p>a) 400</p>
+<p>b) 3FC</p>
+<p>c) 4000</p>
+<p>d) 408</p>
+<p>4: What is the denary equivalent of the HEX number AB?</p>
+<p>a) 165</p>
+<p>b) 170</p>
+<p>c) 175</p>
+<p>d) 180</p>
+<p>5: What is the binary equivalent of the HEX number FF?</p>
+<p>a) 11011101</p>
+<p>b) 11111111</p>
+<p>c) 10101010</p>
+<p>d) 10011001</p>
+<p>6: What is the HEX equivalent of the binary number 101101?</p>
+<p>a) 1B</p>
+<p>b) 1D</p>
+<p>c) 1F</p>
+<p>d) 21</p>
+<p>7: What is the denary equivalent of the binary number 11100001?</p>
+<p>a) 225</p>
+<p>b) 229</p>
+<p>c) 233</p>
+<p>d) 237</p>
+<p>8: What is the binary equivalent of the denary number 127?</p>
+<p>a) 01111111</p>
+<p>b) 10000001</p>
+<p>c) 10111111</p>
+<p>d) 11111110</p>
 
 
 
@@ -1381,10 +1299,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
       
         <script src="https://www.googletagmanager.com/gtag/js?id=G-360RS2BYLD"></script>
       

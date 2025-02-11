@@ -9,22 +9,22 @@
       
       
       
-        <link rel="prev" href="../../9%20DATABASES/9.4%20%20SQL/">
+        <link rel="prev" href="../1.2.2%20%20SOUND%20REPRESENTATION/">
       
       
-        <link rel="next" href="../10.2%20%20USING%20LOGIC%20GATES/">
+        <link rel="next" href="../../1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.1%20%20DATA%20STORAGE%20MEASUREMENTS/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
     
     
       
-        <title>10.1 LOGIC SYMBOLS AND FUNCTIONS - IGCSE CS STUDY powered by CodeRaft</title>
+        <title>1.2.3 IMAGE REPRESENTATION - IGCSE CS STUDY powered by CodeRaft</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
       
 
@@ -43,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#101-logic-symbols-and-functions" class="md-skip">
+        <a href="#123-image-representation" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+    <a href="../../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10.1  LOGIC SYMBOLS AND FUNCTIONS
+              1.2.3  IMAGE REPRESENTATION
             
           </span>
         </div>
@@ -187,7 +187,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+    <a href="../../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -217,7 +217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -234,17 +234,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -258,7 +260,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             1 DATA REPRESENTATION
@@ -307,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.1%20WHY%20COMPUTERS%20USE%20BINARY/" class="md-nav__link">
+      <a href="../../1.1%20NUMBER%20SYSTEMS/1.1.1%20WHY%20COMPUTERS%20USE%20BINARY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -328,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.2%20BINARY%2C%20HEX%20AND%20CONVERTIG%20BETWEEN%20NUMBER%20SYSTEMS/" class="md-nav__link">
+      <a href="../../1.1%20NUMBER%20SYSTEMS/1.1.2%20BINARY%2C%20HEX%20AND%20CONVERTIG%20BETWEEN%20NUMBER%20SYSTEMS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -349,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.3%20%20HEXADECIMAL%20USES/" class="md-nav__link">
+      <a href="../../1.1%20NUMBER%20SYSTEMS/1.1.3%20%20HEXADECIMAL%20USES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -370,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1 DATA REPRESENTATION/1.1 NUMBER SYSTEMS/1.1.4  BINARY ADDITION AND OVERFLOW" class="md-nav__link">
+      <a href="../../../1 DATA REPRESENTATION/1.1 NUMBER SYSTEMS/1.1.4  BINARY ADDITION AND OVERFLOW" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -391,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.5%20%20BINARY%20SHIFT/" class="md-nav__link">
+      <a href="../../1.1%20NUMBER%20SYSTEMS/1.1.5%20%20BINARY%20SHIFT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -412,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.1%20NUMBER%20SYSTEMS/1.1.6%20%20TWO%27S%20COMPLEMENT/" class="md-nav__link">
+      <a href="../../1.1%20NUMBER%20SYSTEMS/1.1.6%20%20TWO%27S%20COMPLEMENT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,17 +440,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -462,7 +466,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             1.2 TEXT, SOUND AND IMAGES
@@ -476,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.1%20%20TEXT%2C%20SOUND%20AND%20IMAGES/" class="md-nav__link">
+      <a href="../1.2.1%20%20TEXT%2C%20SOUND%20AND%20IMAGES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.2%20%20SOUND%20REPRESENTATION/" class="md-nav__link">
+      <a href="../1.2.2%20%20SOUND%20REPRESENTATION/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,10 +519,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.2%20TEXT%2C%20SOUND%20AND%20IMAGES/1.2.3%20%20IMAGE%20REPRESENTATION/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.2.3  IMAGE REPRESENTATION
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -527,6 +549,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#123-image-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 | IMAGE REPRESENTATION
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -582,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.1%20%20DATA%20STORAGE%20MEASUREMENTS/" class="md-nav__link">
+      <a href="../../1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.1%20%20DATA%20STORAGE%20MEASUREMENTS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1%20DATA%20REPRESENTATION/1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.2%20%20CALCULATING%20FILE%20SIZE/" class="md-nav__link">
+      <a href="../../1.3%20DATA%20STORAGE%20AND%20COMPRESSION/1.3.2%20%20CALCULATING%20FILE%20SIZE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.1%282%29%20PROGRAMMING%20CONCEPTS%20CONTINUED/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.1%282%29%20PROGRAMMING%20CONCEPTS%20CONTINUED/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.2%20ARRAYS/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.2%20ARRAYS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8%20Programming/8.3%20FILE%20HANDLING/" class="md-nav__link">
+      <a href="../../../8%20Programming/8.3%20FILE%20HANDLING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -800,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.1%20%20DEFINING%20A%20DATABASE/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.1%20%20DEFINING%20A%20DATABASE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.2%20%20DATA%20TYPES/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.2%20%20DATA%20TYPES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.3%20%20PRIMARY%20KEYS/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.3%20%20PRIMARY%20KEYS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9%20DATABASES/9.4%20%20SQL/" class="md-nav__link">
+      <a href="../../../9%20DATABASES/9.4%20%20SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,19 +937,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -914,7 +961,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             10 BOOLEAN LOGIC
@@ -925,28 +972,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    10.1  LOGIC SYMBOLS AND FUNCTIONS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../10%20BOOLEAN%20LOGIC%E2%80%8B%20/10.1%20%20LOGIC%20SYMBOLS%20AND%20FUNCTIONS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,33 +984,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#101-logic-symbols-and-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      10.1 | LOGIC SYMBOLS AND FUNCTIONS
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -994,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.2%20%20USING%20LOGIC%20GATES/" class="md-nav__link">
+      <a href="../../../10%20BOOLEAN%20LOGIC%E2%80%8B%20/10.2%20%20USING%20LOGIC%20GATES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../0%20Memorize/IGCSE%20Computer%20Science%20Booklet.pdf" class="md-nav__link">
+      <a href="../../../0%20Memorize/IGCSE%20Computer%20Science%20Booklet.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,9 +1105,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#101-logic-symbols-and-functions" class="md-nav__link">
+  <a href="#123-image-representation" class="md-nav__link">
     <span class="md-ellipsis">
-      10.1 | LOGIC SYMBOLS AND FUNCTIONS
+      1.2.3 | IMAGE REPRESENTATION
     </span>
   </a>
   
@@ -1129,212 +1131,58 @@
   
 
 
-  <h1>10.1  LOGIC SYMBOLS AND FUNCTIONS</h1>
+  <h1>1.2.3  IMAGE REPRESENTATION</h1>
 
-<h2 id="101-logic-symbols-and-functions">10.1 | LOGIC SYMBOLS AND FUNCTIONS</h2>
-<p><strong>WHAT ARE LOGIC GATES</strong></p>
-<p>Logic gates are a major component of a computers hardware, there are usually thousands of logic gates in the circuits of computers. Logic gates act as a switch and control the flow of electricity through them depending on the combination of input they receive.</p>
-<p>The types of logic gates discussed in this section are:</p>
-<ul>
-<li>NOT Gate ( represented with <strong>Ā)</strong></li>
-<li>OR Gate (represented with A + B)</li>
-<li>NOR Gate</li>
-<li>AND Gate (represented with A x B or A · B )</li>
-<li>NAND Gate</li>
-<li>XOR Gate ( Represented with ⊕ )</li>
-</ul>
-<p>Each of the various working of the logic gates can be illustrated in Truth Tables. As circuits get big and multiple logic gates or used together it is good practice to use truth tables to trace the outcomes. Most truth tables will replace the text ON and OFF with 1 and 0.</p>
-<p>THE <strong>NOT</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th>The <strong>NOT</strong> gate is the only gate with just one input. The NOT gate simply reverses the input, if the input is ON then the OUTPUT is OFF, if the input is OFF then the output is on.</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/not-gate-orig_2.jpg" />NOT GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>The image above illustrates a NOT gate, it is the circle that symbolises the NOT and this circle is also used on other gates discussed later. Below is the truth table for the NOT gate.</p>
-<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/not-gate-truth-table-orig_2.jpg" /></p>
-<p>NOT GATE TRUTH TABLE</p>
-<p>The NOT gate can be represented in Boolean Algebra by placing a combining overbar over the values to pass through a NOT gate, so NOT A can be represented as <strong>Ā</strong></p>
-<p>THE <strong>OR</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th>The OR gate will give an output value of ON if any of the inputs are ON.</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/or-gate_2.jpg" />OR GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>The OR gate can be viewed as the mathematical equivalent of addition.  A + 0 = A A + A = A 0 + 0 = 0 A + Ā = 1 Notably different from normal mathematics as in boolean logic the above shows the the sum of a variable will equal the variable, for example 1 + 1 = 1</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/or-gate-truth-table_2.jpg" />OR GATE TRUTH TABLE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>NOR</strong> GATE</p>
-<p>The NOR Gate or <strong>N</strong>OT <strong>OR</strong> Gate will have an output if none of the inputs are 1. The NOR gate has a circle on the output to define the NOT part of the gate. You can see this as the opposite of an OR gate.</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/screenshot-2022-02-09-at-09-34-57_2.png" />NOR GATE TRUTH TABLE</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/nor_2.jpg" />NOR GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>AND</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th>The AND gate will only give an output when both inputs are ON, in other works input one AND input two need to be ON to make the output ON.</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/and-gate-orig_2.jpg" />AND GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/and-gate-truth-table_2.jpg" />AND GATE TRUTH TABLE</th>
-<th>The AND gate can be viewed are the mathematical equivalent to multiplication. A x 0 = 0 A x 1 = A A x A = A A x Ā = 0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>NAND</strong> GATE</p>
-<p>The NAND Gate or <strong>N</strong><strong>OT</strong> <strong>AND</strong> Gate will have an output when the two inputs are <strong>not</strong> ON. Or with a three input NAND gate when all 3 inputs are not ON.</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/nand-truth-table_2.jpg" />NAND GATE TRUTH TABLE</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/nand-gate_2.jpg" />THE NAND GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>XOR</strong> GATE</p>
-<p>The XOR gate or e<strong>X</strong>clusive <strong>OR</strong> will only produce an output it the two inputs are different values.</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/xor-gate_2.jpg" />XOR TRUTH TABLE</th>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/xor_2.jpg" />THE XOR GATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>THE <strong>XNOR</strong> GATE</p>
-<table>
-<thead>
-<tr>
-<th><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/published/screenshot-2022-02-10-at-07-46-55_1.png" /></th>
-<th>The exclusive not or will be 1 if both input values are the same.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>LOGIC GATE QUESTIONS</strong></p>
-<p><strong>1: What does the NOT gate do?</strong></p>
-<p>A. Outputs true if both inputs are true</p>
-<p>B. Inverts the input signal</p>
-<p>C. Outputs true if either input is true</p>
-<p>D. Outputs true if both inputs are false</p>
-<p><strong>2: In an AND gate, the output is true when:</strong></p>
-<p>A. Any one of the inputs is true</p>
-<p>B. None of the inputs are true</p>
-<p>C. Both inputs are true</p>
-<p>D. Both inputs are false</p>
-<p><strong>3: Which gate will have a true output when either of its inputs is true?</strong></p>
-<p>A. NOT</p>
-<p>B. AND</p>
-<p>C. OR</p>
-<p>D. NAND</p>
-<p><strong>4: What is the output of a NAND gate when both inputs are true?</strong></p>
-<p>A. True</p>
-<p>B. False</p>
-<p>C. The same as the input</p>
-<p>D. Can't be determined</p>
-<p><strong>5: The NOR gate outputs true when:</strong></p>
-<p>A. Both inputs are true</p>
-<p>B. Either input is true</p>
-<p>C. Neither input is true</p>
-<p>D. Inputs are different</p>
-<p><strong>6: An XOR (Exclusive OR) gate outputs true if:</strong></p>
-<p>A. Both inputs are true</p>
-<p>B. Both inputs are false</p>
-<p>C. The inputs are different</p>
-<p>D. The inputs are the same</p>
-<p><strong>7: Which statement is true about the OR gate?</strong></p>
-<p>A. It outputs false only when both inputs are false</p>
-<p>B. It always outputs true</p>
-<p>C. It outputs true only when both inputs are true</p>
-<p>D. It inverts the input signal</p>
-<p><strong>8: If an AND gate has an input of 1 and 0, the output will be:</strong></p>
-<p>A. 1</p>
-<p>B. 0</p>
-<p>C. The same as the input</p>
-<p>D. Can't be determined</p>
-<p><strong>9: In a NAND gate, if one input is 0 and the other is 1, the output will be:</strong></p>
-<p>A. 1</p>
-<p>B. 0</p>
-<p>C. The same as the input</p>
-<p>D. Inverted</p>
-<p><strong>10: Which gate behaves like an OR gate followed by a NOT gate?</strong></p>
-<p>A. AND</p>
-<p>B. XOR</p>
-<p>C. NOR</p>
-<p>D. NAND</p>
+<h2 id="123-image-representation">1.2.3 | IMAGE REPRESENTATION</h2>
+<p>WHAT IS IMAGE REPRESENTATION?</p>
+<p>Just as numbers and letters are represented with Binary, so are images. To a computer an image is nothing more than a series of ones and zeros which allow the display of pixels in various colours.</p>
+<p>To aid human reading of different colour codes, colours are commonly represented in Hexadecimal using the RGB Red Green Blue system. For example the chart below shows how pure blue is represented using HEX, the HEX code for pure blue is #00 00 FF, meaning it has zero red components, zero green components and the maximum amount of Blue components.</p>
+<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/rgb-orig_1.jpg" /></p>
+<p>A brief colour chart for some of the other colours represented in hexadecimal.
+Most software that allows you to manipulate images or colours will allow you to select colours by their HEX or RGB values.</p>
+<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/hex-colour-chart_1.jpg" /></p>
+<p><strong>Remember:</strong> Hex is used for our benefit to make it easy for use to see and work with, but the computer still deals with colour in binary format.</p>
+<p><strong>Image quality</strong></p>
+<p>The quality of an image depends predominantly of two factors, the amount of Pixels Per Inch (PPi) and the colour depth. The colour depth is determined by how many bits are used to represent each pixel, if 4 bits were used, most images would be grey scale, represented with only 2^4 (16) different shades possible to represent. HEX colour systems are commonly used and allow for 255 possible representations for each colour, Red, Green and Blue which equates to 8 bits used for each of the 3 colour, meaning 24 bit colour depth per pixel (2^24 = 16777216), giving over 16 million individual colours.</p>
+<p>WHAT IS METADATA</p>
+<p>Metadata is extra information that is within a picture file, as we learn from above the picture is actually just strings of binary, and within these string there is often extra data stored. This data often includes details of the device that took the picture and information such as the date the picture was taken. The amount of meta data has an impact on the actual file size of the image so calculating the file size from the image dimensions and bit depth might not be 100% accurate. </p>
+<p>IMAGE FILE TYPES</p>
+<p>There are many different type of images and each format has its unique attributes as follows:</p>
+<p><strong>JPEG or JPG</strong> : Joint Photographic Expert Group, a jpeg image has been compressed from its original size. The compression type is lossy, meaning it does loose some of its quality during compression. JPGs are good for photographs that require good quality images but a small data storage size, such as a photograph being used on a website.</p>
+<p>Some other popular image file types include.</p>
+<p><strong>PNG: PORTABLE NETWORK GRAPHICS</strong> - Supports good quality graphics with 24BIT representation and designed to work well online through web-browsers.</p>
+<p><strong>GIF: GRAPHICS INTERCHANGE FORMAT</strong> - Normally not compressed and can retain features such as background transparency. The File can be large due to lack of compression. Compatible with many platforms.</p>
+<p><strong>BMP: BITMAP</strong> - Normally not compressed and therefore often maintain good quality but can take up more file space.</p>
+<p>What does a higher resolution achieve in a digital image?</p>
+<p>A) It increases the file size without improving image quality.</p>
+<p>B) It reduces the number of colors in the image.</p>
+<p>C) It makes the image sharper and more detailed.</p>
+<p>D) It reduces the size of the image on the screen.</p>
+<p><strong>TERMINOLOGY</strong></p>
+<p><strong>Image Representation</strong> | The process by which a computer stores and displays visual data, such as images, using binary code.</p>
+<p><strong>Pixel</strong> | The smallest unit of a digital image, often represented as a tiny square of color. The image is made up of many pixels arranged in a grid.</p>
+<p><strong>Resolution</strong> | The number of pixels in an image, often expressed as width by height (e.g., 1920x1080). Higher resolution means more pixels, resulting in a sharper and more detailed image.</p>
+<p><strong>Color Depth</strong> | The number of bits used to represent the color of a single pixel. Higher color depth allows for more color combinations, improving image quality.</p>
+<p><strong>Bit Depth</strong> | Refers to the number of bits used for each color channel in an image. For example, 8-bit color depth uses 8 bits per color channel, resulting in 256 color values per channel.</p>
+<p><strong>RGB (Red, Green, Blue)</strong> | A color model where colors are represented by varying intensities of red, green, and blue. Each color is a combination of these three channels.</p>
+<p><strong>Palette</strong> | A set of colors available in an image. In limited color depth images, a palette is often used to represent colors more efficiently.</p>
+<p><strong>Compression</strong> | A method of reducing the file size of an image. Lossless compression retains all original data, while lossy compression sacrifices some detail to achieve a smaller file size.</p>
+<p><strong>Binary Code</strong> | The system of 0s and 1s used by computers to store all data, including image data. Each pixel’s color is stored as binary data.</p>
+<p><strong>File Format</strong> | The structure or type of an image file, such as JPEG, PNG, or BMP, which determines how the data is stored, compressed, and displayed.</p>
+<p><strong>Grayscale</strong> | An image that contains only shades of gray, represented by varying brightness levels from black to white. Grayscale images have lower color depth than full-color images.</p>
+<p><strong>High Resolution</strong> | An image with a large number of pixels, which results in more detail and clarity.</p>
+<p><strong>Low Resolution</strong> | An image with fewer pixels, which may appear blurry or pixelated when viewed at larger sizes.</p>
+<p><strong>True Color</strong> | A color depth of 24 bits, allowing for over 16 million color combinations and providing very high-quality color representation.</p>
+<p><strong>QUESTIONS</strong></p>
+<p>1: Explain what is meant by the term ‘pixel’?</p>
+<p>2: What is meant by the term ‘megapixel’?</p>
+<p>3: What is meant by the term 'colour depth'?</p>
+<p>4: Suggest two things that happen when you increase the colour depth.</p>
+<p>5: What is meant by the term ‘image resolution’?</p>
+<p>6: Suggest two things that happen when you increase the image resolution.</p>
+<p>7: What is a Vector Graphic?</p>
+<p>8: What is Meta Data</p>
+<p>9: Give an example of information that could be stored in Meta data</p>
 
 
 
@@ -1381,10 +1229,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
       
         <script src="https://www.googletagmanager.com/gtag/js?id=G-360RS2BYLD"></script>
       
