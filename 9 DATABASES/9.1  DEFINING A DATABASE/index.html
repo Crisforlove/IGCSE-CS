@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../8%20Programming/8.3%20FILE%20HANDLING/">
+      
+      
+        <link rel="next" href="../9.2%20%20DATA%20TYPES/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>9.1 DEFINING A DATABASE - IGCSE CS STUDY powered by CodeRaft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#91-defining-a-database" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-header__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGCSE CS STUDY powered by CodeRaft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9.1 DEFINING A DATABASE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGCSE CS STUDY powered by CodeRaft" class="md-nav__button md-logo" aria-label="IGCSE CS STUDY powered by CodeRaft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGCSE CS STUDY powered by CodeRaft
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8 Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            8 Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8%20Programming/8.1%20PROGRAMMING%20CONCEPTS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1 PROGRAMMING CONCEPTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8%20Programming/8.1%282%29%20PROGRAMMING%20CONCEPTS%20CONTINUED/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1(2) PROGRAMMING CONCEPTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8%20Programming/8.2%20ARRAYS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2 ARRAYS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8%20Programming/8.3%20FILE%20HANDLING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3 FILE HANDLING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    9 DATABASES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            9 DATABASES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9.1 DEFINING A DATABASE
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    9.1 DEFINING A DATABASE
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-defining-a-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 | DEFINING A DATABASE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1 | DEFINING A DATABASE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHAT IS A DATABASE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.2%20%20DATA%20TYPES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2  DATA TYPES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.3%20%20PRIMARY%20KEYS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3  PRIMARY KEYS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.4%20%20SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4  SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10 BOOLEAN LOGIC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            10 BOOLEAN LOGIC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10%20BOOLEAN%20LOGIC%E2%80%8B%20/10.1%20%20LOGIC%20SYMBOLS%20AND%20FUNCTIONS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.1  LOGIC SYMBOLS AND FUNCTIONS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10%20BOOLEAN%20LOGIC%E2%80%8B%20/10.2%20%20USING%20LOGIC%20GATES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.2  USING LOGIC GATES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-defining-a-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 | DEFINING A DATABASE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1 | DEFINING A DATABASE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHAT IS A DATABASE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>9.1 DEFINING A DATABASE</h1>
+
+<h2 id="91-defining-a-database">9.1 | DEFINING A DATABASE</h2>
+<h3 id="what-is-a-database">WHAT IS A DATABASE</h3>
+<p>As its name suggests a database is a base for storing data. With many advantages over the old paper system of storing data, Databases save space(physical storage space, compared to paper records), allow multiple people to access the same data at the same time and queries (similar to filters) can be done to only show the data required.</p>
+<p>A database is system that allows us to store data in a structured way using tables and fields, and gives us various means of access to to the data.</p>
+<p><strong>What is the difference between a data and information?</strong>
+Data is a collection of facts that are meaningless on their own whereas information puts data into clear understandable context. </p>
+<p><strong>What is the difference between a database and a spreadsheet?</strong>
+Yes, when you look at a database it might look very similar to a spreadsheet. Whilst spreadsheets may primarily be used to manipulate data using functions and formula to perform calculations and statistics, whereas databases are primarily used to store data and often have relationships between tables and should allow the user to easily generate queries to view specific data. Databases are often contain much more data than a spreadsheet.</p>
+<p><strong>What is the difference between a database and an information system?</strong>
+A database may form part of the backend of an information system. As described on wikipedia
+   <em>' An Information system (IS) is a formal, sociotechnical, organizational system designed to collect, process, store, and  distribute information. In a sociotechnical perspective, information systems are composed by four components: task, people, structure (or roles), and technology' (</em>https://en.wikipedia.org/wiki/Information_system)
+A database will contain data that is used by information systems where-as the information system comprises of the complete system, furthermore may present the data from the database in a way in which it becomes information. </p>
+<p>9.1 DATABASES</p>
+<p>All databases contain at least one Table, Record and Field, these are 3 basic terms you should understand when getting started.</p>
+<p><img alt="Picture" src="https://www.computersciencecafe.com/uploads/4/3/9/3/43932527/flatfiledb_orig.png" /></p>
+<p><strong>Table:</strong> A table is what holds the records, fields and defines the structure of the database. 
+<strong>Record</strong>: A record is all of the data about one item. In the table above record one is all of the details about Mercedes
+<strong>Field</strong>: A field refers to each type of data held. In the table above an example of a field would be TeamName</p>
+<p>Entities: An entities is a unique classification about data such as people, objects, places or events.
+​Attributes: An attribute is a single item of data such as the 'Points' for 'Mercedes' in the table above [221]. Attributes could be all the details of the team in position 1, for example [1,Mercedes,Bottas,Hamilton,221].</p>
+<p>If you were asked the question: What is the team name from the record in the second position? The answer would be 'Red Bull Racing'</p>
+<p>WHAT IS A FLAT-FILE DATABASE</p>
+<p>A flat file database is a database where all the records are stored in a single table. The databases above showing the 'F1 Constructors' table is a single flat file database. It has no other tables that it is connected to or has a relationship with. For a very basic and simple that is used by one or a small amount of people database a flat-file database be suitable.</p>
+<p>Databases are more powerful when using a relational database concept. Watch the video below for more on how databases differ from simple spreadsheets.</p>
+<p>DATA VALIDATION</p>
+<p>Data validation and data verification are two important processes used to ensure the accuracy, completeness, and consistency of data in a database system. Although the terms are sometimes used interchangeably, they refer to different processes.</p>
+<p><strong>DATA VALIDATION |</strong> Data validation is the process of checking whether the data entered into a system is accurate, complete, and consistent with predefined rules and constraints. The purpose of data validation is to ensure that the data entered into the system is correct and can be used reliably.</p>
+<p>Data validation is typically performed when data is first entered into the system, and it involves checking for errors, such as missing or invalid data, incorrect data types, or data that does not conform to predefined rules and constraints. Data validation may be performed using automated validation tools, such as regular expressions, or it may involve manual review and correction of data.</p>
+<p><strong>DATA VERIFICATION |</strong> Data verification is the process of checking whether the data in the database is accurate, complete, and consistent with the original source. The purpose of data verification is to ensure that the data stored in the database is a true representation of the original data source.</p>
+<p>Data verification is typically performed on a periodic basis, such as during data migrations or when integrating data from multiple sources. It involves comparing the data in the database with the original source to ensure that it is accurate and complete. Data verification may involve manual checks, automated tools, or a combination of both.</p>
+<p>Data validation and data verification are both essential processes for ensuring the accuracy, completeness, and consistency of data in a database system. Data validation checks the accuracy and completeness of data when it is first entered into the system, while data verification checks the accuracy and completeness of data stored in the database relative to the original source. By performing both data validation and data verification, organizations can ensure that their data is reliable, accurate, and useful.</p>
+<p><strong>TYPES OF VALIDATION</strong></p>
+<p><strong>LENGTH CHECK |</strong> This validation ensures that the data entered has a specific length. It's particularly useful for fields where the length of the data is known and fixed, such as a postal code or telephone number.
+EXAMPLE | A user is asked to enter a ZIP code, which should be exactly 5 digits long. If the user enters less or more than 5 digits, the system will flag this as an error.</p>
+<p><strong>RANGE CHECK |</strong> This type of validation checks if a value falls within a certain range. It's used for numerical data where there are known minimum and maximum values.
+EXAMPLE | If a user is inputting their age into a form, and the valid age range is 18 to 99, any number outside of this range (like 17 or 100) will be rejected.</p>
+<p><strong>DATA TYPE CHECK |</strong> This validation ensures that the data entered is of the correct data type. Common data types include integers, strings, dates, etc.
+EXAMPLE | If a user is asked to enter a date of birth, the system will check to ensure that the input is in a valid date format (like MM/DD/YYYY). If the user enters something like "abcde", the system will reject it as it doesn't match the date data type.</p>
+<p><strong>PRESENCE CHECK |</strong> This validation is used to ensure that essential data is not left blank. It's a basic form of validation to ensure that required fields are filled in.
+EXAMPLE | On a registration form, fields such as 'Email Address' or 'Password' might be mandatory. If the user tries to submit the form without filling these fields, the system will prompt them to complete these fields.</p>
+<p><strong>CHECK DIGIT |</strong> A check digit is a form of redundancy check used for error detection, commonly used in sequences of numbers like account numbers, credit card numbers, etc. A check digit is calculated from the other digits and then included as part of the data.
+EXAMPLE | In a credit card number, the last digit is often a check digit. When a user enters their credit card number, the system can perform a calculation (like the Luhn algorithm) to verify that the number is potentially valid by checking this digit. If the check digit doesn't match the calculated value, it indicates a possible error in the entered number.</p>
+<p>TEST DATA</p>
+<p>Test data is crucial in software testing because it allows developers and testers to verify that a software application functions as intended. By using test data, they can simulate how the software will perform under various conditions and with different types of input. This process helps in identifying bugs, ensuring data integrity, enhancing security, and improving user experience. Test data must be comprehensive and diverse to effectively test all aspects of the software.</p>
+<p><strong>NORMAL DATA |</strong> Normal data, also known as valid data, refers to input that is expected under regular usage conditions. It falls within the range of acceptable or anticipated values that the system is designed to handle.
+EXAMPLE | For a field accepting a person's age, normal data would be any integer between 1 and 100, assuming these are the reasonable age limits for the application's context.</p>
+<p><strong>ABNORMAL DATA |</strong> Abnormal data, or invalid data, is data that falls outside of what the system is designed to handle. It is used to test how the system behaves with inputs that are unexpected or out of scope.
+EXAMPLE | If a text field is only meant to accept alphabetic characters, entering numerical values or special characters would be considered abnormal data.</p>
+<p><strong>EXTREME DATA / BOUNDARY DATA |</strong> Extreme data (also known as boundary data), a subset of normal data, consists of values that are at the edge of acceptable input but still within the range that the system is supposed to handle. It is used to test the limits of the system's capabilities.
+EXAMPLE | For a field accepting a percentage value where the normal range is 0 to 100, extreme data examples would be exactly 0 and 100.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-360RS2BYLD"></script>
+      
+    
+  </body>
+</html>
